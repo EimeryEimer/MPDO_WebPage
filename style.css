@@ -975,7 +975,59 @@ textarea:focus {
     width: min(5%, 100%);
 }
 
-.doc-table-wrapper {
+/* Mobile Menu Styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 4px 12px;
+}
+
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .mainnav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px 0;
+    gap: 12px;
+  }
+  
+  .mainnav ul.open {
+    display: flex;
+  }
+  
+  .mainnav {
+    flex-wrap: wrap;
+  }
+  
+  /* Table horizontal scroll */
+  .doc-table-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 0 -4px;
+  }
+  
+  .doc-index {
+    min-width: 600px;
+  }
+  
+  /* Fix image */
+  .my-image {
+    max-width: 40px;
+    height: auto;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 761px) {
+  .my-image {
+    max-width: 50px;
+  }
 }
