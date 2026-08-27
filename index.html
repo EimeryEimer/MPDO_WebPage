@@ -1,9 +1,9 @@
-<!-- home.html -->
+<!-- home.html --> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MPDC · Home</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,19 +17,23 @@
   </header>
 
   <nav class="mainnav">
-    <div class="brand"><img src="logo.svg" class="my-image" alt=""></img>
+    <div class="brand">
+      <img src="logo.svg" class="my-image" alt="Logo" />
       <div class="brand-text">
         <div class="name">MUNICIPALITY OF ECHAGUE</div>
         <div class="sub">Office of the Municipal Planning & Development Coordinator</div>
       </div>
     </div>
-    <ul>
+    <!-- Mobile hamburger button -->
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="nav-links">
       <li><a href="home.html" class="active">Home</a></li>
       <li><a href="aboutus.html">About Us</a></li>
       <li><a href="contactus.html">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Hero Section - Properly Closed -->
   <section class="hero">
     <div class="grid-bg"></div>
     <div class="hero-inner">
@@ -47,6 +51,7 @@
         </div>
       </div>
     </div>
+  </section> <!-- ✅ Hero closes here -->
 
   <section id="documents">
     <div class="section-inner">
@@ -54,15 +59,18 @@
         <div><span class="num">01 — Downlodables</span><h2>MPDO FILES</h2></div>
         <div class="desc">CLUP, CDP, LDIP, and other references</div>
       </div>
-      <table class="doc-index">
-        <thead><tr><th>Ref.</th><th>Document Title</th><th>Category</th><th>Year</th><th>File</th></tr></thead>
-        <tbody>
-          <tr><td class="filecode">DOC-001</td><td>Comprehensive Land Use Plan</td><td>CLUP</td><td>2023</td><td><a class="dl-link" href="#">Download ↓</a></td></tr>
-          <tr><td class="filecode">DOC-002</td><td>Comprehensive Development Plan</td><td>CDP</td><td>2024</td><td><a class="dl-link" href="#">Download ↓</a></td></tr>
-          <tr><td class="filecode">DOC-003</td><td>Local Development Investment Program</td><td>LDIP</td><td>2024</td><td><a class="dl-link" href="#">Download ↓</a></td></tr>
-          <tr><td class="filecode">DOC-004</td><td>Municipal Profile 2025</td><td>Profile</td><td>2025</td><td><a class="dl-link" href="#">Download ↓</a></td></tr>
-        </tbody>
-      </table>
+      <!-- Table wrapper for horizontal scroll on mobile -->
+      <div class="doc-table-wrapper">
+        <table class="doc-index">
+          <thead><tr><th>Ref.</th><th>Document Title</th><th>Category</th><th>Year</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td class="filecode">DOC-001</td><td>Comprehensive Land Use Plan</td><td>CLUP</td><td>2023</td><td><a class="dl-link" href="#">Download ↓</a></td></tr>
+            <tr><td class="filecode">DOC-002</td><td>Comprehensive Development Plan</td><td>CDP</td><td>2024</td><td><a class="dl-link" href="#">Download ↓</a></td></tr>
+            <tr><td class="filecode">DOC-003</td><td>Local Development Investment Program</td><td>LDIP</td><td>2024</td><td><a class="dl-link" href="#">Download ↓</a></td></tr>
+            <tr><td class="filecode">DOC-004</td><td>Municipal Profile 2025</td><td>Profile</td><td>2025</td><td><a class="dl-link" href="#">Download ↓</a></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -78,6 +86,7 @@
         <div class="stat-card"><span class="stat-label">Land Area</span><div class="stat-num">68,080 <span style="font-size:14px;">ha</span></div><span class="stat-note">total</span></div>
         <div class="stat-card"><span class="stat-label">Total Income</span><div class="stat-num">612,461,263.53</div><span class="stat-note">as of 2025</span></div>
       </div>
+    </div>
   </section>
 
   <section id="programs">
@@ -88,13 +97,22 @@
       </div>
       <div class="prog-list">
         <div class="prog-row"><span class="code">PPA-01</span><div><h3>CBMS 2026</h3><p>Conduct of CMBS Tagging. In partnership with PSA.</p></div><span class="tag">PLANNED</span></div>
-       <div class="prog-row"><span class="code">PPA-02</span><div><h3>Digital Mapping Project</h3><p>GIS-based land use mapping and database. In partnership with DENR.</p></div><span class="tag">Ongoing</span></div>
+        <div class="prog-row"><span class="code">PPA-02</span><div><h3>Digital Mapping Project</h3><p>GIS-based land use mapping and database. In partnership with DENR.</p></div><span class="tag">Ongoing</span></div>
       </div>
     </div>
   </section>
 
+  <footer>© 2026 Office of the Municipal Planning and Development Coordinator — Echague, Isabela. All rights reserved.</footer>
 
-    <footer>© 2026 Office of the Municipal Planning and Development Coordinator — Echague, Isabela. All rights reserved.</footer>
-</body>
+  <!-- Optional: Mobile menu toggle script -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+  </script>
 </body>
 </html>
