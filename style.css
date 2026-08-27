@@ -974,3 +974,8 @@ textarea:focus {
     height: auto;
     width: min(5%, 100%);
 }
+
+.doc-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
