@@ -1,0 +1,113 @@
+<!-- contactus.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPDC · Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* inline tweaks to make map container perfect */
+    .map-placeholder iframe {
+      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      border: none;
+      display: block;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+    }
+    .map-placeholder {
+      padding: 0 !important;
+      overflow: hidden;
+      background: transparent !important;
+      border: 1.5px solid var(--gray-light);
+      border-radius: 16px;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s;
+    }
+    .map-placeholder:hover {
+      border-color: var(--primary);
+    }
+    @media (max-width: 760px) {
+      .map-placeholder iframe {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <span>Republic of the Philippines <span class="mono">/</span> Province of Isabela</span>
+    <span>Mon–Thu · 7:00 AM – 6:00 PM</span>
+  </header>
+
+  <nav class="mainnav">
+    <div class="brand"><img src="logo.svg" class="my-image" alt=""></img>
+      <div class="brand-text">
+        <div class="name">MUNICIPALITY OF ECHAGUE</div>
+        <div class="sub">Office of the Municipal Planning & Development Coordinator</div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="contactus.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <div class="section-inner">
+      <span class="eyebrow">Get in Touch</span>
+      <h1>Contact &amp; Location</h1>
+      <p class="lead">We're here to help. Reach out for planning inquiries, data requests, or coordination.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner contact-grid">
+      <div>
+        <div class="info-block">
+          <span class="lbl">Office Address</span>
+          <span class="val">LGU Compound, Purok 5, San Fabian, Echague, Isabela</span>
+        </div>
+        <div class="info-block">
+          <span class="lbl">Email</span>
+          <span class="val">mpdo.echague2022@gmail.com</span>
+        </div>
+        <div class="info-block">
+          <span class="lbl">Office Hours</span>
+          <span class="val">Mon–Thu, 7:00 AM – 6:00 PM</span>
+        </div>
+        <div style="margin-top:20px; background: var(--card); padding:20px; border-left:3px solid var(--primary); border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+          <p style="font-family:'IBM Plex Mono',monospace; font-size:13px; margin:0; color:var(--ink);">
+            <strong>For data requests:</strong> please send a formal letter or email with the specific data needed. Allow 3–5 working days for processing.
+          </p>
+        </div>
+      </div>
+
+      <!-- Google Map with the exact embed code you provided -->
+      <div class="map-placeholder" id="contactMap">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d909.2745918488341!2d121.68331926955582!3d16.717250283428292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDQzJzAyLjEiTiAxMjHCsDQxJzAyLjMiRQ!5e1!3m2!1sen!2sph!4v1787796264270!5m2!1sen!2sph" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="MPDC Office Location Map"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Office of the Municipal Planning and Development Coordinator — Echague, Isabela. All rights reserved.</footer>
+</body>
+</html>
